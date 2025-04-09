@@ -9,30 +9,36 @@ export default function Contact() {
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 0.5 }}
                 className="my-10 text-center text-4xl">Contact </motion.h1>
-            <div className="text-center tracking-tighter">
-                <motion.p
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
-                    className="my-4">{CONTACT.address}</motion.p>
-                <motion.p
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
-                    className="my-4">{CONTACT.phoneNo}</motion.p>
-                <motion.button
-                    whileInView={{ opacity: 1, x: 0 }}
-                    initial={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
+            <motion.div className="text-center tracking-tighter"
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: -100 }}
+                transition={{ duration: 1 }}>
+                <p
+                    className="my-4">{CONTACT.address}</p>
+                <p
+                    className="my-4">{CONTACT.phoneNo}</p>
+                <button
+
                     onClick={() => window.location.href = `mailto:${CONTACT.email}`}
-                    className="text-white bg-transparent cursor-pointer"
+                    className="text-white bg-transparent cursor-pointer underline"
                 >
                     {CONTACT.email}
-                </motion.button>
+                </button> <br />
+                <a
+                    href="/resume.pdf"
+                    download="Deepa_Resume.pdf"
+                    className="relative inline-block mt-4 text-base px-5 py-2 overflow-hidden b text-white transition-all duration-300 hover:text-black group"
+
+                >
+                    <span className="absolute inset-0 w-full h-0 rounded bg-white transition-all duration-300 ease-out group-hover:h-full group-hover:top-0 z-0"></span>
+                    <span className="relative z-10">Download Resume</span>
+                </a>
 
 
 
-            </div>
+
+
+            </motion.div>
         </div>
     )
 }

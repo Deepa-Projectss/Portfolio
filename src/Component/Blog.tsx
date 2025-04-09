@@ -159,7 +159,7 @@ export default function Blog() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -100 }}
         transition={{ duration: 0.5 }}
-        className="my-10 text-center text-4xl">Blogs</motion.h1>
+        className="my-10 text-center text-4xl mb-28">Blogs</motion.h1>
       <div className="grid md:grid-cols-3 gap-6">
         {blogPosts.map((post) => (
           <motion.div
