@@ -1,6 +1,6 @@
 import aboutImg from '../assets/pic 8.jpg';
 import { ABOUT_TEXT } from '../Constant/Index';
-import { motion } from "framer-motion";  // ✅ Correct Import
+import { motion } from "framer-motion";  
 
 export default function About() {
     return (
