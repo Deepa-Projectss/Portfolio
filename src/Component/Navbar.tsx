@@ -4,8 +4,10 @@ import { FaBars, FaTimes, FaLinkedin, FaGithub } from "react-icons/fa";
 export default function Navbar() {
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const navLinks = ["Home", "About", "Technologies", "Projects", "Experience", "Blog", "Contact"];
+
     const scrollToSection = (id: string) => {
-        const element = document.getElementById(id);
+        const element = document.getElementById(id.toLowerCase()); // convert to lowercase!
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
             setMenuOpen(false);
@@ -19,7 +21,7 @@ export default function Navbar() {
 
             {/* Menu links for large screens */}
             <div className="hidden lg:flex items-center gap-8 text-lg">
-                {["Home", "About", "Technologies", "Projects", "Experience", "Blog", "Contact"].map((id) => (
+                {navLinks.map((id) => (
                     <p
                         key={id}
                         onClick={() => scrollToSection(id)}
@@ -30,19 +32,15 @@ export default function Navbar() {
                 ))}
             </div>
 
-            {/* Right section: resume + social + hamburger */}
+            {/* Right section */}
             <div className="flex items-center gap-4">
-                {/* Resume Button */}
                 <a
                     href="/resume.pdf"
                     download="Deepa_Resume.pdf"
                     className="inline-block text-sm px-3 py-1 rounded bg-white text-black hover:bg-gray-200 transition"
-
                 >
                     Resume
                 </a>
-
-                {/* Social Icons */}
                 <a
                     href="https://www.linkedin.com/in/deepa-kumar-3b990a237"
                     target="_blank"
@@ -72,7 +70,7 @@ export default function Navbar() {
             {/* Mobile dropdown menu */}
             {menuOpen && (
                 <div className="absolute top-full left-0 w-full bg-black/80 text-white flex flex-col items-center gap-4 py-4 lg:hidden z-40 backdrop-blur-sm">
-                    {["Home", "About", "Technologies", "Projects", "Experience", "Blog", "Contact"].map((id) => (
+                    {navLinks.map((id) => (
                         <p
                             key={id}
                             onClick={() => scrollToSection(id)}
