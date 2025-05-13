@@ -35,12 +35,13 @@ export default function Navbar() {
             {/* Right section */}
             <div className="flex items-center gap-4">
                 <a
-                    href="/resume.pdf"
-                    download="Deepa_Resume.pdf"
+                    href="/Portfolio/Deepa_Resumes.pdf"
+                    download="Deepa_Resumes.pdf"
                     className="inline-block text-sm px-3 py-1 rounded bg-white text-black hover:bg-gray-200 transition"
                 >
                     Resume
                 </a>
+
                 <a
                     href="https://www.linkedin.com/in/deepa-kumar-3b990a237"
                     target="_blank"
