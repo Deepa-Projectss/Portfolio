@@ -25,8 +25,8 @@ export default function Contact() {
                     {CONTACT.email}
                 </button> <br />
                 <a
-                    href="/Portfolio/Deepa_Resumes.pdf"
-                    download="Deepa_Resumes.pdf"
+                    href="/Portfolio/Deepa_T_.pdf"
+                    download="Deepa_T_.pdf"
                     className="relative inline-block mt-4 text-base px-5 py-2 overflow-hidden b text-white transition-all duration-300 hover:text-black group"
 
                 >
