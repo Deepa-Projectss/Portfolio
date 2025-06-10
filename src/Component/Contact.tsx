@@ -25,10 +25,10 @@ export default function Contact() {
                     {CONTACT.email}
                 </button> <br />
                 <a
-                    href="/Portfolio/Deepa_T_.pdf"
-                    download="Deepa_T_.pdf"
-                    className="relative inline-block mt-4 text-base px-5 py-2 overflow-hidden b text-white transition-all duration-300 hover:text-black group"
-
+                     href={`${import.meta.env.BASE_URL}Resume.pdf`}
+                    download="Resume.pdf"
+                    className="inline-block text-sm px-3 py-1 rounded bg-white text-black hover:bg-gray-200 transition"
+                
                 >
                     <span className="absolute inset-0 w-full h-0 rounded bg-white transition-all duration-300 ease-out group-hover:h-full group-hover:top-0 z-0"></span>
                     <span className="relative z-10">Download Resume</span>
